@@ -7,11 +7,46 @@
   [![React](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)]()
   [![Three.js](https://img.shields.io/badge/Three.js-black?style=for-the-badge&logo=three.js&logoColor=white)]()
   [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)]()
-
-  <h3><a href="https://smandash-debate-collaboration-with.vercel.app/">🚀 LIVE DEMO 🚀</a></h3>
 </div>
 
 <br />
+
+## 🔗 Akses Aplikasi (Deployment)
+Anda memiliki dua opsi untuk mengakses dan menggunakan aplikasi ini: **Akses Online** (sudah di-deploy) atau **Akses Lokal** (dijalankan di komputer Anda sendiri).
+
+### 1. Akses Online Tercepat (Cloud Deployment) ☁️
+Anda tidak perlu repot menginstal apa pun! Cukup klik tautan di bawah ini untuk langsung menjelajahi *Star Universe* secara live melalui server Vercel:
+
+👉 **[Buka Aplikasi secara Live di Vercel](https://smandash-debate-collaboration-with.vercel.app/)** 👈
+*(https://smandash-debate-collaboration-with.vercel.app/)*
+
+### 2. Akses Secara Lokal (Local Deployment) 💻
+Jika Anda ingin mengembangkan aplikasi ini atau menjalankannya tanpa internet di komputer Anda sendiri, ikuti langkah-langkah berikut:
+
+Pastikan Anda telah menginstal **Node.js** (versi 20 atau lebih baru).
+
+1. **Clone & Masuk ke Folder**
+   ```bash
+   git clone https://github.com/mh1803031-ai/SmandashDebate_Collaboration-with-debatsmandash-ctrl.git
+   cd SmandashDebate_Collaboration-with-debatsmandash-ctrl
+   ```
+
+2. **Install Dependensi**
+   ```bash
+   npm install
+   ```
+
+3. **Jalankan Server Development Lokal**
+   ```bash
+   npm run dev
+   ```
+
+4. **Buka di Browser Anda**
+   Setelah server berjalan, klik tautan di bawah ini untuk mengaksesnya secara lokal:
+   
+   👉 **[http://localhost:5173/](http://localhost:5173/)** 👈
+
+---
 
 ## 📖 Tentang Proyek Ini
 **Debate Coach Toolkit — Star Universe** adalah sebuah platform edukasi debat revolusioner yang memvisualisasikan kurikulum dan materi debat ke dalam bentuk **peta rasi bintang 3D interaktif** (*3D Star Map*). Alih-alih membaca dokumen linier biasa, debaters dapat menjelajahi materi seolah-olah sedang mengarungi alam semesta!
@@ -44,40 +79,6 @@ Aplikasi ini dikembangkan menggunakan bahasa pemrograman **TypeScript** dan **Ja
 * **Animasi UI:** [Framer Motion](https://www.framer.com/motion/)
 * **Styling:** [Tailwind CSS v4](https://tailwindcss.com/) + [Radix UI](https://www.radix-ui.com/)
 * **State Management:** [Zustand](https://github.com/pmndrs/zustand) + [TanStack Query](https://tanstack.com/query)
-
----
-
-## 🚀 Cara Menjalankan di Komputer Lokal
-
-Pastikan Anda telah menginstal **Node.js** (versi 20 atau lebih baru).
-
-1. **Clone & Masuk ke Folder**
-   ```bash
-   git clone https://github.com/mh1803031-ai/SmandashDebate_Collaboration-with-debatsmandash-ctrl.git
-   cd SmandashDebate_Collaboration-with-debatsmandash-ctrl
-   ```
-
-2. **Install Dependensi**
-   ```bash
-   npm install
-   ```
-
-3. **Jalankan Server Development**
-   ```bash
-   npm run dev
-   ```
-   > 🌐 Buka browser Anda dan kunjungi `http://localhost:5173/`
-
----
-
-## 🌐 Deployment (Hosting)
-Proyek ini sudah dikonfigurasi secara optimal untuk di-deploy pada platform *serverless* seperti **Vercel** maupun **Netlify** menggunakan SSR (Server-Side Rendering) dari TanStack Start.
-
-**Vercel Build Command:**
-```bash
-npm run build
-```
-*(Proyek ini otomatis mendeteksi lingkungan Vercel dan membuat bundle yang sesuai untuk Vercel Serverless Functions).*
 
 ---
 

@@ -71,6 +71,8 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
             Go home
           </a>
         </div>
+      </div>
+    </div>
   );
 }
 

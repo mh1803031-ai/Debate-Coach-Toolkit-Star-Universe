@@ -1,7 +1,7 @@
 import { useMemo, useRef } from "react";
 import { useFrame, useLoader } from "@react-three/fiber";
 import * as THREE from "three";
-import nebulaAsset from "@/assets/nebula-skybox.jpg.asset.json";
+import milkywayImg from "@/assets/milkyway_pano_hd.jpg";
 
 /**
  * MilkyWaySky — texture-based nebula skybox.
@@ -9,7 +9,7 @@ import nebulaAsset from "@/assets/nebula-skybox.jpg.asset.json";
  * Equirectangular-ish photo di-wrap ke sphere besar dengan BackSide.
  */
 export function MilkyWaySky({ opacity = 1 }: { opacity?: number }) {
-  const tex = useLoader(THREE.TextureLoader, nebulaAsset.url);
+  const tex = useLoader(THREE.TextureLoader, milkywayImg);
   const groupRef = useRef<THREE.Group>(null);
   const matRef = useRef<THREE.MeshBasicMaterial>(null);
 

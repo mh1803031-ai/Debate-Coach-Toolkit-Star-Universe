@@ -26,31 +26,38 @@ export const Route = createFileRoute("/")({
 function Index() {
   const [loading, setLoading] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    setIsClient(true);
     const mq = window.matchMedia("(pointer: coarse), (max-width: 900px)");
     const apply = () => setIsMobile(mq.matches);
     apply();
     mq.addEventListener?.("change", apply);
     return () => mq.removeEventListener?.("change", apply);
   }, []);
+
   return (
     <main style={{ position: "fixed", inset: 0, overflow: "hidden", background: "#05080f" }}>
       <div className="aurora-bg" />
-      <Universe />
-      {isMobile ? (
-        <MobileShell />
-      ) : (
+      {isClient && (
         <>
-          <Sidebar />
-          <SidePanel />
+          <Universe />
+          {isMobile ? (
+            <MobileShell />
+          ) : (
+            <>
+              <Sidebar />
+              <SidePanel />
+            </>
+          )}
+          <SearchOverlay />
+          <EditorUnlockModal />
+          <SettingsPanel />
+          <AmbientAudio />
+          <AssistantPanel />
         </>
       )}
-      <SearchOverlay />
-      <EditorUnlockModal />
-      <SettingsPanel />
-      <AmbientAudio />
-      <AssistantPanel />
       {loading && <Loader onDone={() => setLoading(false)} />}
       <div
         style={{

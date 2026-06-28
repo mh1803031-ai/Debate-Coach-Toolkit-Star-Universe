@@ -18,6 +18,7 @@ import { useDeviceProfile, type DeviceProfile } from "@/hooks/useDeviceProfile";
 
 // ─── Halo texture (shared canvas radial gradient) ───
 function makeHaloTexture(): THREE.CanvasTexture {
+  if (typeof document === "undefined") return null as any;
   const size = 256;
   const c = document.createElement("canvas");
   c.width = c.height = size;
@@ -117,6 +118,7 @@ function StarField() {
 // ─── Distant galaxies — gradient sprites di area sangat jauh ───
 function Galaxies() {
   const tex = useMemo(() => {
+    if (typeof document === "undefined") return null as any;
     const size = 512;
     const c = document.createElement("canvas");
     c.width = c.height = size;

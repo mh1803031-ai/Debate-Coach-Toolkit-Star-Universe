@@ -154,6 +154,18 @@ export function Loader({ onDone }: { onDone: () => void }) {
         >
           DEBATE COACH TOOLKIT · v0.9 · ROJAAKS
         </div>
+        <div
+          style={{
+            fontFamily: "Space Mono, monospace",
+            fontSize: 8,
+            letterSpacing: "0.2em",
+            color: "rgba(56,189,248,0.6)",
+            marginTop: 8,
+            opacity: Math.min(1, progress * 1.5),
+          }}
+        >
+          CREDITS: mh1803031-ai & debatsmandash-ctrl
+        </div>
       </div>
     </div>
   );
